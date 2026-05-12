@@ -5,9 +5,9 @@ search-app/
 │   └── main.css
 │
 ├── js/
-│   ├── app.js              # entry point
+│   ├── app.js
 │   ├── api/
-│   │   └── searchApi.js    # التعامل مع API
+│   │   └── searchApi.js 
 │   │
 │   ├── utils/
 │   │   ├── debounce.js
