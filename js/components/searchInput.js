@@ -1,6 +1,6 @@
 import { getCache, setCache} from "../utils/cache.js"
 
-export function createSearchHandler({renderResults, results, loader, errorBox}){
+export function createSearchHandler({renderResults, results, errorBox}){
 
     let controller
     let lastQuery = ""
@@ -12,7 +12,6 @@ export function createSearchHandler({renderResults, results, loader, errorBox}){
 
         if(!query){
             results.innerHTML = ""
-            loader.classList.add("hidden")
             return
         }
 
@@ -22,15 +21,11 @@ export function createSearchHandler({renderResults, results, loader, errorBox}){
         try{
             if(controller) controller.abort()
             controller = new AbortController()
-
-            loader.classList.remove("hidden");
             
-
             const cached = getCache(query)
 
             if(cached){
                 renderResults(cached, results)
-                loader.classList.add("hidden")
                 return
             }
 
@@ -48,9 +43,6 @@ export function createSearchHandler({renderResults, results, loader, errorBox}){
         catch(err){
             if(err.name !== "AbortError")
                 errorBox.textContent = "Something is wrong"
-        }
-        finally{
-            loader.classList.add("hidden");
         }
     }
 }

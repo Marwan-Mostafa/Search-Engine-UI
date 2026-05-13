@@ -4,17 +4,15 @@ import { createSearchHandler } from "./components/searchInput.js"
 
 const input = document.getElementById("searchInput")
 const results = document.getElementById("results")
-const loader = document.getElementById("loader")
 const errorBox = document.getElementById("error")
 
-if (!input || !results || !loader || !errorBox) {
+if (!input || !results || !errorBox) {
     throw new Error("Missing required DOM elements");
 }
 
 const handler = createSearchHandler({
     renderResults,
     results,
-    loader,
     errorBox
 })
 
