@@ -6,9 +6,6 @@ const input = document.getElementById("searchInput")
 const results = document.getElementById("results")
 const errorBox = document.getElementById("error")
 
-if (!input || !results || !errorBox) {
-    throw new Error("Missing required DOM elements");
-}
 
 const handler = createSearchHandler({
     renderResults,
