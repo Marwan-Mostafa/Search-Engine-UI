@@ -2,7 +2,7 @@ export function renderResults(items, results){
     results.innerHTML = ""
 
     if(!items || items.length === 0){
-        results.innerHTML = `<p class="text-gray-400">No results found</p>`
+        results.innerHTML = `<p class="text-white-400">No results found</p>`
         return
     }
 
@@ -45,7 +45,7 @@ export function renderResults(items, results){
                 </div>
             </div>
 
-            <!-- FOOTER -->
+                    <!-- FOOTER -->
             <div class="mt-4 flex items-center justify-between">
 
                 <div class="flex items-center gap-2
