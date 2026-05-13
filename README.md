@@ -10,9 +10,7 @@ Real-time search UI simulation
 
 - Dynamic product cards layout
 - Price badge design with modern styling
-- Stock status indicator (In Stock / Out of Stock style UI)
 - Clean and minimal design system
-- Fully responsive layout (mobile-friendly)
 - Smooth hover effects & transitions
 - Structured and scalable frontend code
 
